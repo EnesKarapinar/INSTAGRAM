@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSQuiz</title>
+
+    <!-- Add To Tittle İmage -->
+    <link rel="icon" href="Yazılımcı Rehberi.png" type="image/png">
+
+    <link rel="stylesheet" href="JSQuiz.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+</head>
+
+<body style="background-color:#d3bd99;">
+
+    <div class="degiskenli_tablo">
+
+        <ul class="nav nav-tabs">
+            <li class="active"><a data-toggle="tab" href="#veri1">Soru-1</a></li>
+            <li><a data-toggle="tab" href="#veri2">Soru-2</a></li>
+            <li><a data-toggle="tab" href="#veri3">Soru-3</a></li>
+            <li><a data-toggle="tab" href="#veri4">Sonuç</a></li>
+        </ul>
+
+        <div class="tab-content">
+            <!-- Soru 1 -->
+            <div id="veri1" class="tab-pane fade in active">
+                <h3>Soru 1: Aşağıdakilerden hangisi uygun değişken ismidir?</h3>
+                <hr>
+                <ul class="radio" style="list-style:none">
+                    <li>
+                        <input type="radio" name="s1" value="A" id="s1-1" hidden/>
+                        <label for="s1-1" class="sık">A) Değişken</label>
+                    </li>
+                    <li>
+                        <input type="radio" name="s1" value="B" id="s1-2" hidden/>
+                        <label for="s1-2" class="sık">B) degişken</label>
+                    </li>
+                    <li>
+                        <input type="radio" name="s1" value="C" id="s1-3" hidden/>
+                        <label for="s1-3" class="sık">C) degisken</label>
+                    </li>
+                </ul>
+                <hr>
+
+                <input type="button" value="Geri" onclick="SgunesTabIleriGeriButton('.degiskenli_tablo',0)" class="button button-back">
+                <input type="button" value="İleri" onclick="SgunesTabIleriGeriButton('.degiskenli_tablo',1)" class="button button-next">
+            </div>
+            <!-- Soru 2 -->
+            <div id="veri2" class="tab-pane fade">
+                <h3>Soru 2: Tabloda satır oluşturmak için kullanılan komut hangisidir?</h3>
+                <hr>
+                <ul class="radio" style="list-style:none">
+                    <li>
+                        <input type="radio" name="s2" value="A" id="s2-1" hidden/>
+                        <label for="s2-1" class="sık">A) table</label>
+                    </li>
+                    <li>
+                        <input type="radio" name="s2" value="B" id="s2-2" hidden/>
+                        <label for="s2-2" class="sık">B) td</label>
+                    </li>
+                    <li>
+                        <input type="radio" name="s2" value="C" id="s2-3" hidden/>
+                        <label for="s2-3" class="sık">C) tr</label>
+                    </li>
+                </ul>
+                <hr>
+
+                <input type="button" value="Geri" onclick="SgunesTabIleriGeriButton('.degiskenli_tablo',0)" class="button button-back">
+                <input type="button" value="İleri" onclick="SgunesTabIleriGeriButton('.degiskenli_tablo',1)" class="button button-next">
+            </div>
+            <!-- Soru 3 -->
+            <div id="veri3" class="tab-pane fade">
+                <h3>Soru 3: Stil dosyalarının uzantısı hangisi olur?</h3>
+                <hr>
+                <ul class="radio" style="list-style:none">
+                    <li>
+                        <input type="radio" name="s3" value="A" id="s3-1" hidden/>
+                        <label for="s3-1" class="sık">A) html</label>
+                    </li>
+                    <li>
+                        <input type="radio" name="s3" value="B" id="s3-2" hidden/>
+                        <label for="s3-2" class="sık">B) js</label>
+                    </li>
+                    <li>
+                        <input type="radio" name="s3" value="C" id="s3-3" hidden/>
+                        <label for="s3-3" class="sık">C) css</label>
+                    </li>
+                </ul>
+                <hr>
+
+                <input type="button" value="Geri" onclick="SgunesTabIleriGeriButton('.degiskenli_tablo',0)" class="button button-back">
+                <input type="button" value="Cevapla" onclick="cevapla(); SgunesTabIleriGeriButton('.degiskenli_tablo',1);" class="button button-check" />
+            </div>
+
+            <!-- Sonuç -->
+            <div id="veri4" class="tab-pane fade">
+
+                <h2>Sonuçlar burada gözükecektir...</h2><br>
+                <div id="rapor"></div>
+                <div id="tryagain"></div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <script src="JSQuiz.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

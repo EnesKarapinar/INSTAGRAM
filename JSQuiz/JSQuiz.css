@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+body {
+    font-family: Roboto;
+}
+
+
+/* sık Başlangıç */
+
+input[type="radio"]:checked+.sık {
+    color: #fff;
+}
+
+.sık {
+    font-size: 18px;
+    font-weight: 900;
+}
+
+
+/* sık Bitiş */
+
+.degiskenli_tablo {
+    width: 80%;
+    margin: auto;
+}
+
+.nav-tabs {
+    margin-top: 10px;
+}
+
+ul[class="nav nav-tabs"] li a[data-toggle="tab"] {
+    color: black;
+}
+
+ul[class="nav nav-tabs"] li a[href="#veri1"] {
+    margin-left: 20px;
+}
+
+ul[class="nav nav-tabs"] li a[data-toggle="tab"]:hover {
+    color: rgb(97, 97, 97);
+}
+
+.tab-content {
+    margin-top: 20px;
+}
+
+.button {
+    width: 100px;
+    height: 35px;
+    background-color: rgb(104, 184, 88);
+    border: 1px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    font-weight: 500;
+}
+
+.button-check {
+    background-color: rgb(3, 170, 3);
+}
+
+.try-again {
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    color: black;
+    transition: 0.5s;
+    margin-top: 20px;
+}
+
+.try-again:hover {
+    text-decoration: none;
+    color: white;
+    background-color: black;
+}
