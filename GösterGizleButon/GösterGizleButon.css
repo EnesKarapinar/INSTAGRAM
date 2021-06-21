@@ -1,0 +1,70 @@
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    margin: 20px 0 0 20px;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+input[type="checkbox"]:checked~label {
+    background-color: #241484;
+}
+
+input[type="checkbox"]:checked~label:after {
+    content: 'Gizle';
+}
+
+input[type="checkbox"]:checked~.icerik {
+    max-height: 500px;
+}
+
+label {
+    background-color: #CF3D9B;
+    border: 0;
+    width: 50px;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 3px;
+    font-size: 11px;
+    cursor: pointer;
+    display: block;
+    width: 60px;
+    text-align: center;
+}
+
+label:after {
+    content: 'Göster';
+}
+
+.icerik {
+    margin-top: 20px;
+    max-height: 0;
+    -webkit-transition: all 500ms ease;
+    transition: all 500ms ease;
+    overflow: hidden;
+    background-color: #d5d1c5;
+    width: 400px;
+    box-shadow: 3px 3px 1px rgba(192, 188, 177, 0.9);
+}
+
+.icerik h2 {
+    margin: 20px 20px 0 20px;
+}
+
+.icerik p {
+    margin: 10px 20px 20px 20px;
+    line-height: 1.3em;
+}
+
+.social-media-icons {
+    float: right;
+    font-size: 25px;
+}
+
+.social-media-icons a {
+    color: #818286;
+    text-decoration: none;
+    margin-top: 20px;
+    margin-right: 10px;
+}
