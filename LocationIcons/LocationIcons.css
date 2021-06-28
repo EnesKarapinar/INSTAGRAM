@@ -1,0 +1,93 @@
+body {
+    align-items: center;
+    background-color: #9bdefb;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    width: 100vw;
+}
+
+body * {
+    transition: all 120ms ease-out;
+}
+
+body div {
+    margin-right: 8px;
+}
+
+body div:last-of-type {
+    margin-right: 0px;
+}
+
+.pin-container {
+    height: 58px;
+    position: relative;
+    width: 48px;
+}
+
+.pin {
+    background-color: white;
+    border-color: white;
+    border-style: solid;
+    border-radius: 100% 100% 0 100%;
+    border-width: 1px;
+    box-shadow: 8px 8px 16px rgba(42, 44, 46, 0.08);
+    color: white;
+    position: absolute;
+    left: -24px;
+    top: 10px;
+    transform: rotate(45deg);
+    transform-origin: right bottom;
+    width: 48px;
+    height: 48px;
+}
+
+.pin__daycare {
+    background-color: #f083e3;
+}
+
+.pin__daycare-selected,
+.pin__daycare:hover,
+.pin__daycare:focus {
+    border-color: #f083e3;
+    color: #f083e3;
+}
+
+.pin__preschool {
+    background-color: #bc83ee;
+}
+
+.pin__preschool-selected,
+.pin__preschool:hover,
+.pin__preschool:focus {
+    border-color: #bc83ee;
+    color: #bc83ee;
+}
+
+.pin__featured {
+    background-color: #fcc059;
+}
+
+.pin__featured-selected,
+.pin__featured:hover,
+.pin__featured:focus {
+    border-color: #fcc059;
+    color: #fcc059;
+}
+
+.pin>i {
+    font-size: 20px;
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    transform: rotate(-45deg);
+}
+
+.pin:hover,
+.pin:focus {
+    background-color: white;
+    box-shadow: 8px 8px 48px rgba(0, 135, 194, 0.56);
+    cursor: pointer;
+    transform: rotate(45deg) scale(1.25);
+    z-index: 1;
+}
