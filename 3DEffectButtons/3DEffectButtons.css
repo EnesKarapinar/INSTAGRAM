@@ -1,0 +1,149 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    min-height: 100vh;
+    font-family: "Helvetica Neue", sans-serif;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 10vh;
+}
+
+.button {
+    --font-size: 1.5rem;
+    --perspective: calc(var(--font-size) * 10);
+    --bg: hsl(210, 100%, 56%);
+    --bg-accent: hsl(210, 100%, 46%);
+    --duration: 800ms;
+    --ease: cubic-bezier(0.3, 1.4, 0.65, 1);
+    cursor: pointer;
+    position: relative;
+    perspective: var(--perspective);
+    font-family: inherit;
+    font-size: var(--font-size);
+    font-weight: bold;
+    color: white;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.button:focus {
+    z-index: 1;
+}
+
+.button:focus-visible {
+    --size: 3px;
+    outline: var(--size) dashed var(--bg);
+    outline-offset: calc(var(--size) * 2);
+}
+
+.button .wrapper {
+    position: relative;
+    display: grid;
+    transform: translateZ(calc(var(--font-size) * -1)) scale(1.001) rotateX(0) rotateY(0) rotateZ(0);
+    transform-style: preserve-3d;
+    pointer-events: none;
+}
+
+.button .wrapper {
+    transition: transform var(--duration) var(--ease);
+}
+
+.button .wrapper>* {
+    grid-area: 1 / 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color var(--duration) var(--ease);
+}
+
+.button .front,
+.button .back {
+    padding: 1rem 2rem;
+    background-color: var(--bg);
+}
+
+.button .wrapper :not(.front):not(.back) {
+    background-color: var(--bg-accent);
+}
+
+.button .top,
+.button .bottom {
+    width: 100%;
+    height: var(--font-size);
+}
+
+.button .left,
+.button .right {
+    width: var(--font-size);
+    height: 100%;
+}
+
+.button .front {
+    transform: translateZ(var(--font-size));
+}
+
+.button .back {
+    transform: scaleX(-1);
+}
+
+.button .top {
+    transform-origin: top center;
+    transform: rotateX(90deg);
+}
+
+.button .bottom {
+    align-self: end;
+    transform-origin: bottom center;
+    transform: rotateX(-90deg);
+}
+
+.button .right {
+    justify-self: end;
+    transform-origin: center right;
+    transform: rotateY(90deg);
+}
+
+.button .left {
+    justify-self: start;
+    transform-origin: center left;
+    transform: rotateY(-90deg);
+}
+
+.button.clicked {
+    --bg: hsl(147, 50%, 47%);
+    --bg-accent: hsl(147, 50%, 37%);
+}
+
+.clicked:nth-child(1) .wrapper {
+    transform: translateZ(0) scale(1.001) rotateY(0.5turn);
+}
+
+.clicked:nth-child(2) .wrapper {
+    transform: translateZ(0) scale(1.001) rotateX(-0.5turn) rotateY(0) rotateZ(-0.5turn);
+}
+
+.button:nth-child(3) .back {
+    transform: scaleX(-1) rotate(0.5turn);
+}
+
+.clicked:nth-child(3) .wrapper {
+    transform: translateZ(0) scale(1.001) rotateX(1.5turn) rotateY(0) rotateZ(0);
+}
+
+.button:nth-child(4) {
+    --duration: 1400ms;
+}
+
+.clicked:nth-child(4) .wrapper {
+    transform: translateZ(0) scale(1.001) rotateX(0.5turn) rotateY(0) rotateZ(1.5turn);
+}
