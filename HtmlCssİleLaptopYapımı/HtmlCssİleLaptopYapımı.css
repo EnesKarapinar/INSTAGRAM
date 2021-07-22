@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;700;900&display=swap");
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #fff;
+}
+
+.laptop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.screen-outer {
+    position: relative;
+    background-color: #000;
+    width: 30rem;
+    height: 21rem;
+    border-radius: 15px;
+}
+
+.screen-inner {
+    position: absolute;
+    top: 1.5rem;
+    left: 0.9rem;
+    height: calc(100% - 3.8rem);
+    width: calc(100% - 1.7rem);
+    background-color: #fff;
+}
+
+.screen-inner img {
+    width: 100%;
+    height: 100%;
+}
+
+.bottom-strip {
+    width: 100%;
+    height: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    position: absolute;
+    bottom: 0.4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bottom-strip span {
+    position: relative;
+    top: -2px;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 5px;
+}
+
+.keyboard {
+    position: relative;
+    width: 34rem;
+    height: 1.2rem;
+    background: #494949;
+    bottom: 0.8rem;
+    border-radius: 3px 3px 0 0;
+}
+
+.base {
+    position: relative;
+    bottom: 1rem;
+    width: 34rem;
+    height: 0.8rem;
+    background: #3a3a3a;
+    border-bottom-left-radius: 50% 60%;
+    border-bottom-right-radius: 60% 50%;
+}
