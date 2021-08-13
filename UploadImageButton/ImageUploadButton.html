@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ImageUploadButton</title>
+
+    <link rel="stylesheet" href="ImageUploadButton.css">
+</head>
+
+<body>
+    <main class="main_full">
+        <div class="container">
+            <div class="panel">
+                <div class="button_outer">
+                    <div class="btn_upload">
+                        <input type="file" id="upload_file" name=""> Upload Image
+                    </div>
+                    <div class="processing_bar"></div>
+                    <div class="success_box"></div>
+                </div>
+            </div>
+            <div class="error_msg"></div>
+            <div class="uploaded_file_view" id="uploaded_view">
+                <span class="file_remove">X</span>
+            </div>
+        </div>
+    </main>
+
+    <!-- Jquery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+    <script src="ImageUploadButton.js"></script>
+</body>
+
+</html>
